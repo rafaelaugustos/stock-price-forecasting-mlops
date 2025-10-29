@@ -1,0 +1,19 @@
+{
+    "model": "LSTM",
+    "ticker": "AAPL",
+    "timestamp": "20251027_201201",
+    "training_time_seconds": 37.42855,
+    "seq_length": 60,
+    "epochs": 50,
+    "batch_size": 32,
+    "train_size": 1104,
+    "test_size": 90,
+    "train_mae": 3.6504830208377568,
+    "train_rmse": 4.808630110833061,
+    "test_mae": 5.674025132921008,
+    "test_rmse": 7.269739959782537,
+    "test_mape": 2.436520291484526,
+    "test_r2": 0.8642577202509343,
+    "model_file": "models/lstm_AAPL_20251027_201201.keras",
+    "scaler_file": "models/scaler_AAPL_20251027_201201.pkl"
+}
