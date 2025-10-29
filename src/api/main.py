@@ -48,11 +48,11 @@ def load_latest_model():
         raise FileNotFoundError("No model files found")
 
     latest_model_path = model_files[0]
-    full_version = latest_model_path.stem.replace("lstm_", "").replace(f"{TICKER}_", "")
+    full_version = latest_model_path.stem.replace("lstm_", "")
     model_version = full_version
 
-    scaler_path = MODEL_DIR / f"scaler_{TICKER}_{full_version}.pkl"
-    metrics_path = MODEL_DIR / f"metrics_{full_version}.json"
+    scaler_path = MODEL_DIR / f"scaler_{full_version}.pkl"
+    metrics_path = MODEL_DIR / f"metrics_{full_version.replace(f'{TICKER}_', '')}.json"
 
     print(f"Loading model: {latest_model_path}")
     model = tf.keras.models.load_model(latest_model_path)
