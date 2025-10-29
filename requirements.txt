@@ -1,13 +1,9 @@
 yfinance
 pandas
 numpy
-matplotlib
-seaborn
-jupyter
-prophet
 scikit-learn
 fastapi
 uvicorn[standard]
 pydantic
 python-dotenv
-pytest
+tensorflow
