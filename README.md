@@ -128,7 +128,7 @@ LSTM(50) -> Dropout(0.2) -> LSTM(50) -> Dropout(0.2) -> Dense(25) -> Dense(1)
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/stock-price-forecasting-mlops.git
+git clone https://github.com/rafaelaugustos/stock-price-forecasting-mlops.git
 cd stock-price-forecasting-mlops
 ```
 
