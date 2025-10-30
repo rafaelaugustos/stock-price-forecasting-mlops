@@ -1,16 +1,16 @@
 import os
-os.environ['YF_USE_CURL_CFFI'] = '0'
-
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-import tensorflow as tf
-import numpy as np
-import pandas as pd
-import yfinance as yf
 import pickle
 import json
 from datetime import datetime, timedelta
 from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import yfinance as yf
+import tensorflow as tf
+
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from .schemas import (
     PredictionRequest,
     PredictionResponse,
