@@ -7,3 +7,6 @@ uvicorn[standard]
 pydantic
 python-dotenv
 tensorflow
+requests
+lxml
+html5lib

@@ -42,11 +42,9 @@ venv.bak/
 
 ._*
 
-models/*.pkl
 models/*.joblib
 models/*.h5
 models/*.pt
-*.pkl
 *.joblib
 
 data/raw/*.csv

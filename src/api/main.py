@@ -9,6 +9,8 @@ import json
 import os
 from datetime import datetime, timedelta
 from pathlib import Path
+
+os.environ['YF_USE_CURL_CFFI'] = '0'
 from .schemas import (
     PredictionRequest,
     PredictionResponse,
@@ -68,7 +70,7 @@ def load_latest_model():
     print(f"✓ Model loaded successfully: version {model_version}")
 
 
-def get_recent_data(days=100):
+def get_recent_data(days=150):
     end_date = datetime.now()
     start_date = end_date - timedelta(days=days)
 
@@ -140,7 +142,7 @@ async def predict(request: PredictionRequest):
         raise HTTPException(status_code=503, detail="Model not loaded")
 
     try:
-        recent_prices = get_recent_data(days=100)
+        recent_prices = get_recent_data()
 
         scaled_data = scaler.transform(recent_prices.reshape(-1, 1))
 
